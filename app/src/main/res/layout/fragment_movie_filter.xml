@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:orientation="vertical"
+    android:clipToOutline="true"
+    android:background="@drawable/bottom_sheet_rounded">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+        <TextView
+            android:id="@+id/tvFilterHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filter Movies"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"
+             />
+
+        <ImageView
+            android:layout_marginStart="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_filter" />
+    </LinearLayout>
+
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#4D4D4D"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Genres -->
+    <TextView
+        android:text="Genres"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroupGenre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:singleSelection="false"
+        app:chipSpacing="8dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Sort By -->
+    <TextView
+        android:text="Sort By"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroupSort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:singleSelection="true"
+        app:chipSpacing="8dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Release Year -->
+    <TextView
+        android:text="Release Year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/rangeSliderReleaseYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:valueFrom="1900"
+        android:valueTo="2025"
+        android:stepSize="1"
+        android:layout_marginBottom="10dp"
+        app:labelBehavior="gone"
+        app:trackColorActive="#FF4D4D"
+        app:thumbTint="#FF4D4D"
+        app:haloColor="#33FF4D4D"
+        app:trackColorInactive="#4D4D4D"
+        app:thumbRadius="14dp"
+        app:haloRadius="22dp"
+        app:trackHeight="6dp"
+        android:elevation="2dp"
+        app:tickColorActive="#FF4D4D"
+        app:tickColorInactive="#4D4D4D"
+        app:tickVisible="true"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/textViewMinYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1900"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:padding="6dp"
+            android:background="@drawable/year_pill_background"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="to"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:paddingHorizontal="8dp"/>
+
+        <TextView
+            android:id="@+id/textViewMaxYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2025"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:padding="6dp"
+            android:background="@drawable/year_pill_background"/>
+    </LinearLayout>
+
+
+
+    <!-- Minimum Rating -->
+    <TextView
+        android:text="Minimum Rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <SeekBar
+        android:id="@+id/seekBarRating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="10"
+        android:progress="5"
+        android:thumbTint="#FF4D4D"
+        android:progressTint="#FF4D4D"
+        android:progressBackgroundTint="#FFFFFF"
+        android:splitTrack="false"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/textViewRatingValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="5.0"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReset"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:text="Reset"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:textColor="#FF4D4D"
+            android:textSize="14sp"
+            app:strokeColor="#FF4D4D"
+            app:strokeWidth="1dp"
+            android:layout_marginEnd="8dp"
+            app:cornerRadius="24dp"
+            />
+
+        <Button
+            android:id="@+id/btnApply"
+            android:text="Apply"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:backgroundTint="#FF4D4D"
+            app:cornerRadius="24dp"
+            />
+    </LinearLayout>
+</LinearLayout>
+
