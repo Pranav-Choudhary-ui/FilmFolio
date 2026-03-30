@@ -69,7 +69,7 @@ FilmFolio follows the **MVVM (Model-View-ViewModel)** architecture with clear se
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/filmfolio.git
+git clone https://github.com/Pranav-Choudhary-ui/FilmFolio
 cd filmfolio
 ```
 ### 2. Add Your API Keys
